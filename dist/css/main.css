@@ -374,17 +374,64 @@ li.bloc_card p {
   font-size: 13px;
 }
 li.bloc_card span {
-  position: fixed;
-  right: 9em;
+  position: absolute;
+  right: 19em;
   font-weight: 400;
+  transition: all 400ms ease-in-out;
 }
 li.bloc_card span:hover {
-  background: #99E2D0;
+  transition: all 400ms ease-in-out;
   border-radius: 0 25px 25px 0;
-  padding: 65px 59px 30px 34px;
-  margin: -66px -31px 0 0;
+  padding: 51px 152px 21px 34px;
+  margin: -54px -157px 0px 0px;
 }
 
 .index {
   background: #F6F6F6;
+}
+
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: #96b7c4;
+  transition-delay: 0.6s;
+}
+
+.btn:hover::before {
+  transition-delay: 0s;
+}
+
+.btn:hover::after {
+  background: #99E2D0;
+  border-radius: 0 25px 25px 0;
+  transition-delay: 0s;
+}
+
+/************* Animation *************/
+.animDroite::before,
+.animDroite::after {
+  top: 0;
+  width: 0;
+  height: 100%;
+}
+
+.animDroite:before {
+  left: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.animDroite:after {
+  right: 0;
+}
+
+.animDroite:hover::before,
+.animDroite:hover::after {
+  width: 50%;
 }/*# sourceMappingURL=main.css.map */
