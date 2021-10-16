@@ -1,0 +1,14 @@
+.search-city {
+  width: 100%;
+  height: 73px;
+  background: linear-gradient(180deg, #CECECE, #f3f0f0);
+}
+
+input {
+  transform: translateX(15%);
+  border: none;
+  background: initial;
+  font-size: 19px;
+  cursor: pointer;
+  outline: none;
+}

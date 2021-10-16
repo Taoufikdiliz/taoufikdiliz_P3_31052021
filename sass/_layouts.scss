@@ -1,14 +1,10 @@
-i.far.fa-heart:hover {
-    color: $heart-color;
-}
-
 footer {
     background: $foot-color;
     color: $root-color;
     padding: 10px 0 46px 30px;
         h1 {
+            text-align: left;
             font-weight: weight(lighter);
-            font-family: "Shrikhand", cursive;
             font-size: 27px;
         }
         a {

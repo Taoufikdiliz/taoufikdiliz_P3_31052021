@@ -1,0 +1,64 @@
+// Loader
+.loading {
+    // Création loader
+
+    border: 10px solid $tertiary-color;
+    border-top: 10px solid $primary-color;
+    border-bottom: 10px solid $secondary-color;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    -webkit-animation: spin 3s linear forwards;
+    -o-animation: spin 3s linear forwards;
+    animation: spin 3s linear forwards;
+
+// Placement loader
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+// Animation du loader
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+// Heart
+
+.heart {
+    position: absolute;
+    font-size: 25px;
+    right: 70px;
+    cursor: pointer;
+}
+.fa-heart {
+    border-radius: 50%;
+    padding: 0.2em;
+  }
+  .fa-heart::before {
+    content: "\f004";
+    transition: color 1s ease-out;
+  }
+  .fa-heart:hover::before {
+    color: red;
+    cursor: pointer;
+  }

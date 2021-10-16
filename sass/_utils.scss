@@ -1,52 +1,39 @@
+// Variables
+
+$primary-color: #9356DC;
+$secondary-color: #FF79DA;
+$tertiary-color: #99E2D0;
+
+$card-color: #e7e4e4;
+$root-color: #fff;
+$text-color: black;
+$heart-color: red;
+
+$card-hover: #F5EDFF;
+
+$foot-color: #353535;
+
+$font-weights: (
+    "lighter": 100,
+    "regular": 300,
+    "medium": 400,
+    "bold": 700,
+);
+
+// Functions
+
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+// Mixins
+
 @mixin flexCenter {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-@mixin placeCard {
-    margin: -2px -3px 8em -2px;
-    width: auto;
-    height: 18em;
-    border-radius: 25px 25px 0 0;
-}
-
-@mixin flexBetween {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-@mixin placeInfo {
-    padding: 17em 0 0 30px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 19px;
-    margin-right: 60px;
-}
-
-@mixin cardPicture {
-    border-radius: 0;
-    background-size: cover;
-    height: 27em;
-}
-
-@mixin flexNormal {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    align-self: normal;
-}
-
-@mixin homeButton {
-    margin: 40px auto auto;
-    padding: 21px;
-    border: none;
-    background: linear-gradient($secondary-color, $primary-color);
-    border-radius: 25px;
-    color: $root-color;
-    cursor: pointer;
-    font-size: 20px;
+    text-align: center;
 }
 
 @mixin hoverButton {
@@ -55,3 +42,36 @@
     transform: scale(1.15);
     }
 }
+
+@mixin homeButton {
+    width: 246px;
+    margin: 40px auto auto;
+    padding: 20px;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+}
+@mixin placeCard {
+    margin: -2px -3px 8em -2px;
+    width: auto;
+    height: 18em;
+    border-radius: 25px 25px 0 0;
+}
+@mixin placeInfo {
+    padding: 17em 0 0 30px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 19px;
+}
+
+@mixin cardPicture {
+    width: 94%;
+    height: 13em;
+    margin: 0 auto;
+    border-radius: 25px 25px 0 0;
+    background-size: cover;
+}
+
+
+// Placeholders
